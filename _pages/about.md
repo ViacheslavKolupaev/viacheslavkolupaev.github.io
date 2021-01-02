@@ -1,8 +1,39 @@
 ---
 permalink: /about/
-title: "About"
+title: "Обо мне"
+excerpt: "Обо мне"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+# ✅ Кто я
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Data Scientist | Machine Learning Engineer. Опыт работы в интернет-проектах более 5 лет. Более 16 лет опыта в IT в целом.
+
+Руководил командами (до 55 человек из 7 организаций), проектами (много и по разным направлениям), программами проектов (до 14 проектов в программе). Доверяли ответственные направления, потому что надёжен, умею общаться с людьми и решать проблемы.
+
+Придумал идею, собрал продуктовую команду, получил инвестиции и запустил с нуля web&mobile SaaS start-up (‘Tabletkin’).
+
+Ещё я: отец, муж и сын, коллега, старший по подъезду в многоквартирном доме и председатель ревизионной комиссии в гаражном кооперативе на 600 человек.
+
+# Чем полезен
+
+Анализирую, думаю и ищу точки роста доходности. Помогаю принимать решения на основе данных, тестировать гипотезы, запускать успешные в работу.
+
+В условиях ограниченных ресурсов и времени. Неважно, какими инструментами.
+
+# :heavy_check_mark: Мой подход к делу
+
+1. Уметь общаться и понимать задачи бизнеса. Каждый день задавать себе вопрос: «Что бизнес хочет от тебя»?
+1. На первом месте value для компании, а не DS и модели ML. Моя главная цель — помочь бизнесу.
+1. Сделать — не значит внедрить в работу.
+1. Искать нестандартные подходы, дающие конкурентные преимущества. Делать не как все, потому что одни и те же действия приводят к одним и тем же результатам.
+1. Решать вопросы системно. Подниматься на уровень выше проблем, потому что на том же уровне осознания их нельзя решить. Не возвращаться к ним дважды.
+1. Применять критическое мышление. Ставить под сомнение поступающую информацию и собственные убеждения.
+1. Больше действовать → больше ошибаться → больше учиться на ошибках и идти дальше.
+
+# :ok_hand: Связаться
+
+Пожалуйста, не стесняйтесь обращаться ко мне.
