@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ru-RU"
-title                    : &name "Вячеслав Колупаев / Viacheslav Kolupaev"
+title                    : &name "Блог Вячеслава Колупаева"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : *name
+name                     : "Вячеслав Колупаев / Viacheslav Kolupaev"
 description              : "Анализирую, думаю и ищу точки роста бизнеса. Помогаю принимать решения на основе данных, тестировать гипотезы, запускать успешные в работу."
 url                      : "https://viacheslavkolupaev.github.io"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -30,7 +30,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "facebook"  # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : false  # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -293,10 +293,20 @@ defaults:
       comments: true # true
       share: true
       related: true
-  # _pages  — added by me
   - scope:
-      path: ""
+      path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
+      read_time: false
+      comments: false # true
+      share: false
+      related: false
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      author_profile: false
+
