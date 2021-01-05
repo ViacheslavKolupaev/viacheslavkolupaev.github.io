@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Вячеслав Колупаев / Viacheslav Kolupaev"
 description              : "Анализирую, думаю и ищу точки роста бизнеса. Помогаю принимать решения на основе данных, тестировать гипотезы, запускать успешные в работу."
-url                      : "https://viacheslavkolupaev.github.io"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://viacheslavkolupaev.ru"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ViacheslavKolupaev/viacheslavkolupaev.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
