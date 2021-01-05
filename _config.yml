@@ -98,7 +98,7 @@ analytics:
 # Site Author
 author:
   name             : "Вячеслав Колупаев"
-  avatar           : "/assets/images/Viacheslav-Kolupaev.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Viacheslav-Kolupaev.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Нахожу точки роста.\n\nПомогаю принимать решения на основе данных."
   location         : "Тюмень, Россия"
   email            : "v.s.kolupaev@gmail.com"
