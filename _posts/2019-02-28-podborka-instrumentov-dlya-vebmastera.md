@@ -8,7 +8,7 @@ tags:
   - yandex
   - bing
 header:
-  teaser: /assets/images/posts_teasers/podborka-instrumentov-dlya-vebmastera.png
+  teaser: /assets/images/posts_teasers/podborka-instrumentov-dlya-vebmastera.webp
 
 ---
 
