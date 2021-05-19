@@ -10,6 +10,11 @@ tags:
 header:
   teaser: /assets/images/posts_teasers/podborka-instrumentov-dlya-vebmastera.webp
 
+toc: true
+toc_label: "На этой странице"
+toc_icon: "cog"
+toc_sticky: true
+
 ---
 
 В статье перечислены инструменты для вебмастера, которыми пользуюсь я сам. Просмотрите список, добавьте в «Избранное» браузера, чтобы всегда было под рукой.

@@ -11,6 +11,11 @@ tags:
 header:
   teaser: /assets/images/posts_teasers/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager.webp
 
+toc: true
+toc_label: "На этой странице"
+toc_icon: "cog"
+toc_sticky: true
+
 ---
 
 **Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.**

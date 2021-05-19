@@ -85,7 +85,7 @@ social:
     - "https://www.linkedin.com/in/vkolupaev/"
     - "https://www.facebook.com/v.s.kolupaev"
     - "https://twitter.com/vskolupaev"
-    - "https://www.instagram.com/viacheslav_kolupaev/"
+    #- "https://www.instagram.com/viacheslav_kolupaev/"
 
 # Analytics
 analytics:
@@ -121,9 +121,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ViacheslavKolupaev"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/viacheslav_kolupaev/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://www.instagram.com/viacheslav_kolupaev/"
     - label: "Telegram"
       icon: "fab fa-telegram"
       url: "https://t.me/vkolupaev/"
@@ -143,9 +143,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       #url: "https://github.com/ViacheslavKolupaev"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      #url: "https://www.instagram.com/viacheslav_kolupaev/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  #url: "https://www.instagram.com/viacheslav_kolupaev/"
     - label: "Telegram"
       icon: "fab fa-telegram"
       url: "https://t.me/vkolupaev/"
@@ -310,4 +310,6 @@ defaults:
     values:
       author_profile: false
       show_date: true
+      sidebar:
+        nav: "docs"
 

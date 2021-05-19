@@ -10,6 +10,11 @@ tags:
 header:
   teaser: /assets/images/posts_teasers/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks.webp
 
+toc: true
+toc_label: "На этой странице"
+toc_icon: "cog"
+toc_sticky: true
+
 ---
 
 Лучше знать об этом на стадии проектирования. До того, как вы начали настройку сетапа.
