@@ -20,7 +20,7 @@ title                    : &name "Блог Вячеслава Колупаева
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Вячеслав Колупаев / Viacheslav Kolupaev"
-description              : "Анализирую, думаю и ищу точки роста бизнеса. Помогаю принимать решения на основе данных, тестировать гипотезы, запускать успешные в работу."
+description              : "Программирую на Python: REST API, ML pipelines, asyncio, microservices. Организовываю людей. Довожу дела до конца."
 url                      : "https://viacheslavkolupaev.ru"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ViacheslavKolupaev/viacheslavkolupaev.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -99,7 +99,7 @@ analytics:
 author:
   name             : "Вячеслав Колупаев"
   avatar           : "/assets/images/Viacheslav-Kolupaev.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Нахожу точки роста.\n\nПомогаю принимать решения на основе данных."
+  bio              : "Программирую на Python: REST API, ML pipelines, asyncio, microservices.\n\nОрганизовываю людей. Довожу дела до конца."
   location         : "Тюмень, Россия"
   email            : "v.s.kolupaev@gmail.com"
   links:
