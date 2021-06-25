@@ -1,0 +1,775 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования - Блог Вячеслава Колупаева</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Вячеслав Колупаев">
+  
+  <meta property="article:author" content="Вячеслав Колупаев">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Блог Вячеслава Колупаева">
+<meta property="og:title" content="3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования">
+<meta property="og:url" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/assets/images/stars_01.webp">
+
+
+
+  <meta name="twitter:site" content="@vskolupaev">
+  <meta name="twitter:title" content="3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/assets/images/stars_01.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-02-04T00:00:00+05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Вячеслав Колупаев / Viacheslav Kolupaev",
+      "url": "https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/",
+      "sameAs": ["https://www.linkedin.com/in/vkolupaev/","https://www.facebook.com/v.s.kolupaev","https://twitter.com/vskolupaev"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googleb555c12bd30d69dd.html" />
+
+
+  <meta name="msvalidate.01" content="550CE4DCFFF1A7BC779BF1BBFE6EFB23">
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<script language="javascript">
+  // Enforce SSL
+  (function (root) {
+    "use strict";
+    var h = root ? root.location.hostname : "",
+    p = root ? root.location.protocol : "";
+    if ("http:" === p && !(/^(localhost|127.0.0.1)/).test(h)) {
+      root.location.protocol = "https:";
+    }
+  }
+  ("undefined" !== typeof window ? window : this));
+</script>
+
+<link href="/pages/ViacheslavKolupaev/feed.xml" type="application/atom+xml" rel="alternate" title="Блог Вячеслава Колупаева Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/pages/ViacheslavKolupaev/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PDLRX2V');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- End Favicon -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/pages/ViacheslavKolupaev/">
+          Блог Вячеслава Колупаева
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/posts/">Посты</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/categories/">Категории</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/tags/">Тэги</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/about/">Обо мне</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Выпадающее меню</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/pages/ViacheslavKolupaev/assets/images/stars_01.webp');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования
+
+        
+      </h1>
+      
+        <p class="page__lead"><!--**Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.**-->
+
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-04T00:00:00+05:00">February 4, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          менее 1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Выпадающее меню</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">🚀 MLOps</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">CI/CD</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">💰 ADOPS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">ADFOX: multi-size запросы в AdManager</a></li>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/">ADFOX: ограничение по блокам РСЯ</a></li>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/">ADFOX: ограничение по наборам ДМ</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">🚧 SEO</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/seo/podborka-instrumentov-dlya-vebmastera/">Подборка инструментов для вебмастера</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2021-02-04T00:00:00+05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <!--**Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.**-->
+<!--excerpt_separator-->
+
+<!--Utility Classes: https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/-->
+<!--Emoji: https://emojipedia.org/-->
+
+<p>Я видел, как многие люди беспокоятся о том, что они медленно программируют. По моему опыту, если вы:</p>
+
+<ol>
+  <li>работаете над <strong>важными проектами</strong>;</li>
+  <li><strong>продолжаете двигаться</strong> вперед;</li>
+  <li><strong>заканчиваете</strong> проекты,</li>
+</ol>
+
+<p>то не имеет большого значения, насколько вы быстры или медленны.</p>
+
+<p class="notice--success"><strong>ProTip:</strong> Хорошо подумайте над пунктом 1. А то ведь можно бежать 🏃‍♂️, но в неверном направлении 🧭.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Метки: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#productivity" class="page__taxonomy-item" rel="tag">productivity</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#tips" class="page__taxonomy-item" rel="tag">tips</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Разделы: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/categories/#software-development" class="page__taxonomy-item" rel="tag">software-development</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Дата изменения:</strong> <time datetime="2021-02-04T00:00:00+05:00">February 4, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Поделиться</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=vskolupaev&text=3+%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D0%B0%2C+%D1%81%D0%BE%D0%B1%D0%BB%D1%8E%D0%B4%D0%B0%D1%8F+%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5+%D0%BD%D0%B5+%D0%BD%D1%83%D0%B6%D0%BD%D0%BE+%D0%B1%D0%B5%D1%81%D0%BF%D0%BE%D0%BA%D0%BE%D0%B8%D1%82%D1%8C%D1%81%D1%8F+%D0%BE+%D1%81%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%B8+%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fsoftware-development%2F3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fsoftware-development%2F3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fsoftware-development%2F3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fsoftware-development%2F3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya%2F" class="btn btn--telegram" title="Поделиться Telegram"><i class="fab fa-telegram" aria-hidden="true"></i><span> Telegram</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/" class="pagination--pager" title="Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager
+">Предыдущая</a>
+    
+    
+      <a href="/pages/ViacheslavKolupaev/software-development/http-status-codes/" class="pagination--pager" title="Шпаргалка по HTTP Status Codes (кодам ответа)
+">Следующая</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Вам также может понравиться</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/500x300.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/software-development/http-status-codes/" rel="permalink">Шпаргалка по HTTP Status Codes (кодам ответа)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-06-24T00:00:00+05:00">June 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/posts_teasers/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/" rel="permalink">Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-10T00:00:00+05:00">January 10, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/posts_teasers/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/" rel="permalink">Максимальное количество блоков РСЯ в Адфокс
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-07T00:00:00+05:00">January 7, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Лучше знать об этом на стадии проектирования. До того, как вы начали настройку сетапа.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/posts_teasers/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/" rel="permalink">Максимальное количество наборов Динамической монетизации в Адфокс
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-06T00:00:00+05:00">January 6, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          менее 1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">По умолчанию количество наборов Динамической монетизации ограничено. Это может стать сюрпризом в большом проекте.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Введите поисковый запрос..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Связаться со мной:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/vkolupaev/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://www.facebook.com/v.s.kolupaev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://t.me/vkolupaev/" rel="nofollow noopener noreferrer"><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a></li>
+        
+      
+        
+          <li><a href="mailto:v.s.kolupaev@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    <li><a href="/pages/ViacheslavKolupaev/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> RSS-лента</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Вячеслав Колупаев / Viacheslav Kolupaev. Сайт работает на <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/pages/ViacheslavKolupaev/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr.min.js"></script>
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr-store.js"></script>
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDLRX2V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

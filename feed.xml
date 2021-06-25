@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/" rel="alternate" type="text/html" /><updated>2021-06-25T19:23:44+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/feed.xml</id><title type="html">Блог Вячеслава Колупаева</title><subtitle>Программирую на Python: REST API, ML pipelines, asyncio, microservices. Организовываю людей. Довожу дела до конца.</subtitle><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><entry><title type="html">Шпаргалка по HTTP Status Codes (кодам ответа)</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/http-status-codes/" rel="alternate" type="text/html" title="Шпаргалка по HTTP Status Codes (кодам ответа)" /><published>2021-06-24T00:00:00+05:00</published><updated>2021-06-24T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/http-status-codes</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/http-status-codes/">&lt;!--**Some text.**--&gt;
+&lt;!--excerpt_separator--&gt;
+
+&lt;!--Utility Classes: https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/--&gt;
+&lt;!--Emoji: https://emojipedia.org/--&gt;
+
+&lt;h1 id=&quot;шпаргалка-по-http-status-codes-кодам-ответа&quot;&gt;Шпаргалка по HTTP Status Codes (кодам ответа)&lt;/h1&gt;
+&lt;p&gt;Источник: &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616&quot;&gt;RFC 2616 Hypertext Transfer Protocol – HTTP/1.1&lt;/a&gt;, раздел &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-10&quot;&gt;10. Status Code Definitions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;successful-2xx-200--206&quot;&gt;Successful 2xx: 200 — 206&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-10.2&quot;&gt;Источник&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Клиентский запрос был успешно получен, понят и принят.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Code&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;200&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ОК&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрос успешно обработан. Информация в ответ на запрос зависит от метода запроса: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; — в ответе возвращается сущность, относящаяся к запросу; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; — возвращаются поля заголовка, относящиеся к запрашиваемому ресурсу, без message-body; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; — возвращается сущность, описывающая или содержащая результат действия; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRACE&lt;/code&gt; — возвращается сущность, содержащся сообщение-запрос, как его получил конечный сервер.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;201&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Created&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрос успешно выполнен и в результате был создан ресурс. Этот код обычно присылается в ответ на запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt;. Ответ &lt;strong&gt;должен&lt;/strong&gt; включать сущность, содержащую список характеристик и расположений ресурса, из которых пользователь или user agent может выбрать наиболее подходящий. Сервер &lt;strong&gt;должен&lt;/strong&gt; создать ресурс перед возвратом кода &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;201&lt;/code&gt;. Если действие не может быть выполнено незамедлительно, то сервер &lt;strong&gt;должен&lt;/strong&gt; ответить кодом &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;202 (Accepted)&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;202&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Accepted&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрос принят, но ещё не обработан. В конечном итоге запрос может быть обработан, а может и не быть исполнен, поскольку он может быть запрещен, когда будет выполняться обработка. Нет возможности повторно отправить код состояния из такой асинхронной операции, как эта. Это предназначено для случаев, когда запрос обрабатывается другим процессом или сервером, либо для пакетной обработки, например, раз в день. Сущность, возвращаемая с этим ответом, &lt;strong&gt;должна&lt;/strong&gt; включать указание текущего состояния запроса и, либо указатель на монитор статуса, либо некоторую оценку того, когда пользователь может ожидать выполнения запроса.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;204&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No Content&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Нет содержимого для ответа на запрос, но заголовки ответа, которые могут быть полезны, присылаются. Клиент может использовать их для обновления кешированных заголовков полученных ранее для этого ресурса. Ответ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;204&lt;/code&gt; &lt;strong&gt;не должен&lt;/strong&gt; включать тело сообщения и, таким образом, всегда заканчивается первой пустой строкой после полей заголовка.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;redirection-3xx-300--307&quot;&gt;Redirection 3xx: 300 — 307&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-10.3&quot;&gt;Источник&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Этот класс кода состояния указывает, что &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user agent&lt;/code&gt; должен предпринять дальнейшие действия для выполнения запроса.&lt;/p&gt;
+
+&lt;p&gt;Требуемое действие &lt;strong&gt;может&lt;/strong&gt; быть выполнено &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user agent&lt;/code&gt; без взаимодействия с пользователем тогда и только тогда, когда во втором запросе используется метод &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; или &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;. Клиент &lt;strong&gt;должен&lt;/strong&gt; обнаруживать бесконечные петли перенаправления, поскольку такие петли генерируют сетевой трафик для каждого перенаправления.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Code&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;301&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Moved Permanently&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрошенному ресурсу был назначен новый постоянный URI, и любые будущие ссылки на этот ресурс &lt;strong&gt;должны&lt;/strong&gt; использовать один из возвращенных URI.&lt;br /&gt;&lt;br /&gt; Новый постоянный URI &lt;strong&gt;должен&lt;/strong&gt; быть указан в поле &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Location&lt;/code&gt; в ответе. Если метод запроса не был &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, объект ответа &lt;strong&gt;должен&lt;/strong&gt; содержать короткую гипертекстовую заметку с гиперссылкой на новый URI.&lt;br /&gt;&lt;br /&gt; Если код состояния &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;301&lt;/code&gt; получен в ответ на запрос, отличный от &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; или &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user agent&lt;/code&gt; &lt;strong&gt;не должен&lt;/strong&gt; автоматически перенаправлять запрос, если он не может быть подтвержден пользователем, поскольку это может изменить условия, при которых запрос был выпущен.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;304&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Not Modified&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Используется для кэширования. Этот код ответа значит, что запрошенный ресурс не был изменен. Таким образом, клиент может продолжать использовать кэшированную версию ответа. &lt;br /&gt;&lt;br /&gt; Если клиент выполнил условный запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; и доступ разрешен, но документ не был изменен, сервер &lt;strong&gt;должен&lt;/strong&gt; ответить этим кодом состояния. Ответ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;304&lt;/code&gt; &lt;strong&gt;не должен&lt;/strong&gt; содержать тело сообщения и, таким образом, всегда заканчивается первой пустой строкой после полей заголовка. &lt;br /&gt;&lt;br /&gt; Ответ &lt;strong&gt;должен&lt;/strong&gt; включать следующие поля заголовков:&lt;ul&gt;&lt;li&gt;Date&lt;/li&gt;&lt;li&gt;ETag и/или Content-Location, если заголовок будет отправлен в 200 ответе на тот же запрос.&lt;/li&gt;&lt;li&gt;Expires, Cache-Control, и/или Vary, если значение поля может отличаться от того, что было отправлено в любом предыдущем ответе для того же варианта.&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;client-error-4xx-400--417&quot;&gt;Client Error 4xx: 400 — 417&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-10.4&quot;&gt;Источник&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Класс кода состояния 4xx предназначен для случаев, когда клиент, кажется, допустил ошибку. За исключением ответа на запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, сервер &lt;strong&gt;должен&lt;/strong&gt; включать объект, содержащий объяснение ситуации с ошибкой и того, является ли это временным или постоянным состоянием.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Code&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;400&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bad Request&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Этот ответ означает, что сервер не понимает запрос из-за неверного синтаксиса. Клиент НЕ &lt;strong&gt;должен&lt;/strong&gt; повторять запрос без модификации. Запрос клиента → валидация → не пройдена → &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;400&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;401&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unauthorized&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрос требует аутентификации пользователя. Ответ &lt;strong&gt;должен&lt;/strong&gt; включать поле заголовка &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-14.47&quot;&gt;WWW-Authenticate&lt;/a&gt;, содержащее запрос, применимый к запрошенному ресурсу.&lt;br /&gt;&lt;br /&gt;Клиент &lt;strong&gt;может&lt;/strong&gt; повторить запрос с подходящим полем заголовка &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-14.8&quot;&gt;Authorization&lt;/a&gt;. Если запрос уже включал учетные данные &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Authorization&lt;/code&gt;, то ответ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;401&lt;/code&gt; указывает, что в авторизации для этих учетных данных было отказано.&lt;br /&gt;&lt;br /&gt;Если ответ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;401&lt;/code&gt; содержит тот же вызов, что и предыдущий ответ, и пользовательский агент уже пытался аутентифицироваться хотя бы один раз, то пользователь &lt;strong&gt;должен&lt;/strong&gt; представить объект, который был указан в ответе, поскольку этот объект может включать в себя релевантную диагностическую информацию.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;403&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Forbidden&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Сервер понял запрос, но отказывается его выполнить. Авторизация не поможет и запрос &lt;strong&gt;не должен&lt;/strong&gt; повторяться. Если метод запроса не был &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; и сервер желает обнародовать причину невыполнения запроса, он &lt;strong&gt;должен&lt;/strong&gt; описать причину отказа в объекте. Если сервер не желает предоставлять эту информацию клиенту, вместо этого можно использовать код состояния &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;404 (Not Found)&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;404&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Not Found&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Сервер не нашел ничего, соответствующего &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Request-URI&lt;/code&gt;. Не указывается, является ли состояние временным или постоянным.&lt;br /&gt;&lt;br /&gt;Код состояния &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;410 (Gone)&lt;/code&gt; &lt;strong&gt;следует&lt;/strong&gt; использовать, если сервер знает через некоторый внутренне настраиваемый механизм, что старый ресурс постоянно недоступен и не имеет адреса пересылки.&lt;br /&gt;&lt;br /&gt;Этот код состояния обычно используется, когда сервер не желает точно раскрывать, почему запрос был отклонен, или когда другой ответ не применим.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;405&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Method Not Allowed&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Метод, указанный в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Request-Line&lt;/code&gt;, не разрешен для ресурса, указанного в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Request-URI&lt;/code&gt;. Ответ &lt;strong&gt;должен&lt;/strong&gt; включать заголовок &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow&lt;/code&gt;, содержащий список допустимых методов для запрошенного ресурса.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;406&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Not Acceptable&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Ресурс, идентифицированный запросом, способен генерировать только объекты ответа, характеристики содержимого которых неприемлемы в соответствии с заголовками принятия, отправленными в запросе.&lt;br /&gt;&lt;br /&gt;Если ответ может быть неприемлемым, пользовательский агент &lt;strong&gt;должен&lt;/strong&gt; временно прекратить получение дополнительных данных и запросить у пользователя решение о дальнейших действиях.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;408&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Request Timeout&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Клиент не отправил запрос в течение времени, которое сервер был готов ждать. Клиент &lt;strong&gt;может&lt;/strong&gt; повторить запрос без изменений в любое время.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;409&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Conflict&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрос не может быть выполнен из-за конфликта с текущим состоянием ресурса. Этот код разрешен только в ситуациях, когда ожидается, что пользователь сможет разрешить конфликт и повторно отправить запрос. В теле ответа &lt;strong&gt;следует&lt;/strong&gt; включать достаточно информации, чтобы пользователь мог распознать источник конфликта.&lt;br /&gt;&lt;br /&gt;В идеале, объект ответа должен включать достаточно информации для пользователя или пользовательского агента, чтобы исправить проблему; однако это может быть невозможно и не требуется.&lt;br /&gt;&lt;br /&gt;Конфликты наиболее вероятны в ответ на запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PUT&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;410&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gone&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Запрошенный ресурс больше не доступен на сервере, и адрес пересылки неизвестен. Ожидается, что это состояние будет считаться &lt;strong&gt;постоянным&lt;/strong&gt;. Клиенты с возможностью редактирования ссылок &lt;strong&gt;должны&lt;/strong&gt; удалить ссылки на &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Request-URI&lt;/code&gt; после утверждения пользователем.&lt;br /&gt;&lt;br /&gt;Если сервер не знает или не имеет возможности определить, является ли условие постоянным, &lt;strong&gt;следует&lt;/strong&gt; использовать вместо него код состояния &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;404 (Not Found)&lt;/code&gt;. Этот ответ кэшируется, если не указано иное.&lt;br /&gt;&lt;br /&gt;Ответ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;410&lt;/code&gt; в первую очередь предназначен для поддержки задачи обслуживания сети путем уведомления получателя о том, что ресурс &lt;strong&gt;намеренно недоступен&lt;/strong&gt; и что владельцы сервера желают, чтобы удаленные ссылки на этот ресурс были удалены. Такое событие характерно для ограниченных по времени рекламных услуг и для ресурсов, принадлежащих лицам, которые больше не работают на сайте сервера. Нет необходимости отмечать все постоянно недоступные ресурсы как «пропавшие» или сохранять отметку в течение какого-либо периода времени — это остается на усмотрение владельца сервера.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;server-error-5xx-500--505&quot;&gt;Server Error 5xx: 500 — 505&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc2616#section-10.5&quot;&gt;Источник&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Коды состояния ответа, начинающиеся с цифры «5», указывают на случаи, когда сервер знает, что он допустил ошибку или не может выполнить запрос.&lt;/p&gt;
+
+&lt;p&gt;За исключением ответа на запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;, серверу &lt;strong&gt;следует&lt;/strong&gt; включать объект, содержащий объяснение ситуации с ошибкой и того, является ли это временным или постоянным состоянием. Пользовательские агенты &lt;strong&gt;должны&lt;/strong&gt; отображать пользователю любую вложенную сущность. Эти коды ответов применимы к любому методу запроса.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Code&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Internal Server Error&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Сервер обнаружил непредвиденное условие, которое помешало ему выполнить запрос.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;501&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Not Implemented&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Метод запроса не поддерживается сервером и не может быть обработан. Единственные методы, которые сервера должны поддерживать и, соответственно, не должны возвращать этот код —  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; и &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HEAD&lt;/code&gt;.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;502&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bad Gateway&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Сервер, выступая в качестве шлюза или прокси, получил недопустимый ответ от вышестоящего сервера, к которому он обращался при попытке выполнить запрос.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;503&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Unavailable&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;В настоящее время сервер не может обработать запрос из-за временной перегрузки или обслуживания сервера.&lt;br /&gt;&lt;br /&gt;Подразумевается, что это временное состояние, которое будет улучшено после некоторой задержки. Если известно, продолжительность задержки &lt;strong&gt;может&lt;/strong&gt; быть указана в заголовке &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Retry-After&lt;/code&gt;. Если &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Retry-After&lt;/code&gt; не задан, клиент &lt;strong&gt;должен&lt;/strong&gt; обработать ответ так же, как и для ответа &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;500&lt;/code&gt;.&lt;br /&gt;&lt;br /&gt;Примечание: Наличие кода состояния &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;503&lt;/code&gt; не означает, что сервер должен использовать его при перегрузке. Некоторые серверы могут просто отказаться от подключения.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;504&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gateway Timeout&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Сервер, выступая в качестве шлюза или прокси, не получил своевременного ответа от вышестоящего сервера, указанного в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;URI&lt;/code&gt; (например, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FTP&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LDAP&lt;/code&gt;) или какого-либо другого вспомогательного сервера (например, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DNS&lt;/code&gt;), к которому он должен был получить доступ при попытке завершить запрос.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="software-development" /><category term="http" /><category term="api" /><summary type="html"></summary></entry><entry><title type="html">3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/" rel="alternate" type="text/html" title="3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования" /><published>2021-02-04T00:00:00+05:00</published><updated>2021-02-04T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/">&lt;!--**Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.**--&gt;
+&lt;!--excerpt_separator--&gt;
+
+&lt;!--Utility Classes: https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/--&gt;
+&lt;!--Emoji: https://emojipedia.org/--&gt;
+
+&lt;p&gt;Я видел, как многие люди беспокоятся о том, что они медленно программируют. По моему опыту, если вы:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;работаете над &lt;strong&gt;важными проектами&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;продолжаете двигаться&lt;/strong&gt; вперед;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;заканчиваете&lt;/strong&gt; проекты,&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;то не имеет большого значения, насколько вы быстры или медленны.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;ProTip:&lt;/strong&gt; Хорошо подумайте над пунктом 1. А то ведь можно бежать 🏃‍♂️, но в неверном направлении 🧭.&lt;/p&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="software-development" /><category term="productivity" /><category term="tips" /><summary type="html"></summary></entry><entry><title type="html">Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/" rel="alternate" type="text/html" title="Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager" /><published>2020-01-10T00:00:00+05:00</published><updated>2020-01-10T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">&lt;p&gt;&lt;strong&gt;Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.&lt;/strong&gt;
+&lt;!--excerpt_separator--&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Дисклеймер.&lt;/strong&gt; Я не сотрудник ADFOX, Яндекса и Google, и не могу гарантировать абсолютную точность дальнейших утверждений. Все выводы сделаны на основании открытых источников и собственных исследований.&lt;/p&gt;
+
+&lt;h1 id=&quot;как-adfox-направляет-запросы-в-admanager&quot;&gt;Как ADFOX направляет запросы в AdManager&lt;/h1&gt;
+
+&lt;p&gt;Как именно ADFOX направляет рекламные запросы в AdManager не описано в документации ADFOX и уж тем более в документации AdManager. Но, пожалуй, есть только один способ — библиотека &lt;a href=&quot;https://developers.google.com/publisher-tag/guides/get-started&quot;&gt;Google Publisher Tag&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Скорее всего, вызов осуществляется для каждой площадки ADFOX, к которой привязан набор Динамической монетизации. Вызов делает сам ADFOX, поэтому вам не нужно специально размечать сайт с помощью GPT. Но всё равно полезно понимать, как это работает внутри.&lt;/p&gt;
+
+&lt;p&gt;Пример вызова ad unit’a в AdManager выглядит так:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;utf-8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GPT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/title&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;https://securepubads.g.doubleclick.net/tag/js/gpt.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]};&lt;/span&gt;
+   &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defineSlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+             &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;ad-unit-path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pubads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+     &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enableServices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/head&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;что-такое-и-в-чём-польза-multi-size&quot;&gt;Что такое и в чём польза &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;Допустим, на сайте имеется рекламное место максимальным размером &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt;. Появляются опции: выводить в нём креативы строго &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt; или же добавить меньшие размеры.&lt;/p&gt;
+
+&lt;p&gt;Давайте разберемся на примерах.&lt;/p&gt;
+
+&lt;h2 id=&quot;fixed-size&quot;&gt;Fixed-size&lt;/h2&gt;
+
+&lt;p&gt;В простейшем случае рекламное место с одним фиксированным размером может быть определено следующим кодом GPT:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defineSlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/1234567/your-ad-slot-name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-gpt-fixed-size-ad&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pubads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Для таких &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed-size&lt;/code&gt; мест ротатор рекламы запрашивает и получает от монетизаторов креатив размером &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Если ротатор вдруг пришлет креатив другого размера, то он будет &lt;a href=&quot;https://support.google.com/admanager/answer/1143651&quot;&gt;автоматически отфильтрован AdManager&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\kreativy-kotorye-ne-sootvetstvuyut-razmeru-zaprosa-obyavleniya-otfiltrovyvayutsya.webp&quot; alt=&quot;Креативы, которые не соответствуют размеру запроса объявления, отфильтровываются.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Минусы:&lt;/strong&gt; если мало рекламодателей с таким размером креатива, то давление на аукцион будет меньше, соответственно и доход может быть меньше.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Плюсы:&lt;/strong&gt; вёрстка рекламных мест не дёргается, сайт выглядит более органично.&lt;/p&gt;
+
+&lt;h2 id=&quot;multi-size&quot;&gt;Multi-size&lt;/h2&gt;
+
+&lt;p&gt;Код GPT &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; отличается от &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed-size&lt;/code&gt; только указанием словаря допустимых размеров креатива:&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defineSlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/1234567/your-ad-slot-name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;160&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-gpt-multi-size-ad&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pubads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Для таких &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; мест ротатор запрашивает все указанные в настройках размеры, вписывающиеся в &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt;. Например: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x250&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;160x600&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;240x400&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;240x600&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;В этом случае, в AdManager должны быть настроены размеры для вызываемого из ADFOX ad unit’a:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\admanager-ad-unit-sizes.webp&quot; alt=&quot;Размеры ad unit в AdManager&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Таким образом, с применением &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; доход может быть больше, так как появлется аукцион среди размеров креативов.&lt;/p&gt;
+
+&lt;p&gt;Не зря же РСЯ предлагает настроить &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; при создании блока:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\yan-multi-size-set-up.webp&quot; alt=&quot;РСЯ предлагает настроить multi-size при создании блока&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Как вы понимаете, интеграция ADFOX и РСЯ полная и запрос &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; креативов работает по умолчанию.&lt;/p&gt;
+
+&lt;h1 id=&quot;как-adfox-поддерживает-multi-size--для-запросов-в-admanager&quot;&gt;Как ADFOX поддерживает &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt;  для запросов в AdManager&lt;/h1&gt;
+
+&lt;p&gt;Я узнал об этом случайно. Я настроил в ADFOX &lt;strong&gt;Динамическую монетизацию&lt;/strong&gt; (далее — «ДМ») по шаблону DFP с отправкой запросов на подбор креатива в AdManager.
+Еще я настроил кампании &lt;strong&gt;Внешней монетизации&lt;/strong&gt; (далее — «ВМ») с отправкой запросов в тот же AdManager.&lt;/p&gt;
+
+&lt;p&gt;Изучая отчёты AdManager, я обратил внимание, что ДМ запрашивает в AdManager креативы только одного размера, например, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;300x600&lt;/code&gt;.
+&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\multi-size-ad-requests-disabled.webp&quot; alt=&quot;multi-size выключен&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Запрашивается размер, указанный в настройках набора ДМ. Здесь так и просится добавить перечень допустимых размеров:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\nastrojki-nabora-dinamicheskoj-monetizacii-v-adfox.webp&quot; alt=&quot;Настройки набора Динамической монетизации в ADOFX&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;При этом, кампании ВМ спокойно запрашивают &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt;.
+&lt;img src=&quot;\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\multi-size-ad-requests-enabled.webp&quot; alt=&quot;multi-size включен&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Код вызова &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; я сам указываю в коде баннера, ассоциированного с кампанией ВМ (внимание, код неполный):&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defineSlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/1234567/ad-unit-name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;160&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;
+    	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div-gpt-ad-some-long-random-number-0&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+    	&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pubads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pubads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enableSingleRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;googletag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enableServices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод.&lt;/strong&gt; Выходит, что в случае с ДМ имеется недостаток в реализации запросов в AdManager, не дающий возможности &lt;strong&gt;заработать в Google по максимуму&lt;/strong&gt;, так как исключается аукцион среди размеров креативов. С другой стороны, &lt;strong&gt;в РСЯ с этим проблем нет&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Я искренне считал, что кампании типа ДМ — эволюционное развитие ВМ, впитавшее в себя все лучшее. Выходит, что не всё так просто.&lt;/p&gt;
+
+&lt;p&gt;И тут я задался вопросом: как это исправить?&lt;/p&gt;
+
+&lt;h1 id=&quot;можно-ли-для-дм-включить-отправку-multi-size-запросов&quot;&gt;Можно ли для ДМ включить отправку &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; запросов&lt;/h1&gt;
+
+&lt;p&gt;Экспресс-ресёрсч по документации ничего не дал. Эта тема никак не освещена.&lt;/p&gt;
+
+&lt;p&gt;Далее я обратился в саппорт ADFOX. Отмечу, что ребята там грамотные, разбираются в сложных вопросах устройства ротатора. Я даже спросил, может быть есть какая-то недокументированная возможность в ядре ADFOX, чтобы включить нужный мне функционал.&lt;/p&gt;
+
+&lt;p&gt;Результат такой: &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; в ДМ сейчас не поддерживается&lt;/strong&gt;, размеры только фиксированные.&lt;/p&gt;
+
+&lt;p&gt;По итогу я попросил добавить такую фичу в продукт в будущем. Это будет системное решение, которое положительно повлияет на доходы всех паблишеров, использующих ADFOX.&lt;/p&gt;
+
+&lt;p&gt;Я отдаю себе отчёт, что там вряд ли прислушаются к единичной просьбе. Но если мотивированных запросов будет много, то им придётся сделать это.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;Поэтому, &lt;strong&gt;прямо сейчас напишите&lt;/strong&gt; в саппорт просьбу сделать для ДМ 2.0 отправку &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; запросов в AdManаger. Это ваши незаработанные деньги!&lt;/p&gt;
+
+&lt;h1 id=&quot;запомнить&quot;&gt;Запомнить&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;ADFOX размечает ваш сайт тегами GPT и отправляет запросы в AdManager за вас. Чтобы лучше понять, как всё работает, смотрите GPT.&lt;/li&gt;
+  &lt;li&gt;Запросы Динамической монетизации отправляются в Google AdManager только &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed-size&lt;/code&gt;. Так меньше давление на аукцион. Хотя GPT позволяет отправлять &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Для запросов в  РСЯ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; включен по умолчанию.&lt;/li&gt;
+  &lt;li&gt;В дополнение к ДМ, можно отправлять &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multi-size&lt;/code&gt; запросы в AdManager из кампаний Внешний монетизации. Но так придётся самостоятельно управлять ставками кампаний: вручную или посредством &lt;strong&gt;API&lt;/strong&gt;. Это и есть «хитрое» решение, которое я применяю.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="adops" /><category term="adfox" /><category term="yandex" /><category term="admanager" /><category term="gpt" /><summary type="html">Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.</summary></entry><entry><title type="html">Максимальное количество блоков РСЯ в Адфокс</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/" rel="alternate" type="text/html" title="Максимальное количество блоков РСЯ в Адфокс" /><published>2020-01-07T00:00:00+05:00</published><updated>2020-01-07T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/">&lt;p&gt;Лучше знать об этом на стадии проектирования. До того, как вы начали настройку сетапа.
+&lt;!--excerpt_separator--&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;зачем-может-потребоваться-создавать-много-блоков-рся&quot;&gt;Зачем может потребоваться создавать много блоков РСЯ&lt;/h1&gt;
+
+&lt;p&gt;При проектировании структуры монетизации сайта я стараюсь делать отдельные блоки РСЯ на каждый раздел сайта и рекламное место страницы. Так можно получить дополнительные преимущества, например:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Появляется &lt;strong&gt;статистика&lt;/strong&gt; в разрезе каждого рекламного места. Видно вклад каждого конкретного блока в общий доход.&lt;/li&gt;
+  &lt;li&gt;Снижается или полностью исключается эффект пессимизации или &lt;strong&gt;bid сorrection&lt;/strong&gt; места «за компанию» с другими местами.&lt;/li&gt;
+  &lt;li&gt;Можно делать индивидуальные &lt;strong&gt;схемы переторговки&lt;/strong&gt; с Google или другими монетизаторами и на числах тестировать их эффективность.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Но, если следовать по такому пути, то рано или поздно можно упереться в ограничение РСЯ. Лично я до такого ограничения дошёл.&lt;/p&gt;
+
+&lt;h1 id=&quot;количество-блоков-рся-для-одной-площадки-ограничено-200-шт&quot;&gt;Количество блоков РСЯ для одной площадки ограничено 200 шт.&lt;/h1&gt;
+
+&lt;p&gt;Я узнал об этом, когда попытался создать новый блок РСЯ из интерфейса Адфокс:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-07-maksimalnoe-kolichestvo-blokov-rsya-v-adfoks\dobavlenie-novogo-bloka-rsya-v-interfejse-adfoks.webp&quot; alt=&quot;Добавление нового блока РСЯ в интерфейсе Адфокс&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Далее выбрал площадку РСЯ, где планировал создать блок:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-07-maksimalnoe-kolichestvo-blokov-rsya-v-adfoks\vybor-ploshchadki-rsya-pri-dobavlenii-novogo-bloka-v-interfejse-adfoks.webp&quot; alt=&quot;Добавление нового блока РСЯ в интерфейсе Адфокс&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ну а далее я получил такую вот ошибку:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-07-maksimalnoe-kolichestvo-blokov-rsya-v-adfoks\oshibka-pri-dobavlenii-novogo-bloka-rsya-v-interfejse-adfoks.webp&quot; alt=&quot;Выбор площадки РСЯ при добавлении нового блока РСЯ в интерфейсе Адфокс&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;как-я-решал-проблему&quot;&gt;Как я решал проблему&lt;/h1&gt;
+
+&lt;p&gt;Я написал своему менеджеру в РСЯ, потому что отлуп мне дал именно РСЯ. Ещё написал обращение в саппорт Адфокса.&lt;/p&gt;
+
+&lt;p&gt;Как выяснилось далее, вопрос вне компетенции менеджера. Всё дальнейшее общение по кейсу было с саппортом.&lt;/p&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;Из него я понял следующее:&lt;/strong&gt; ограничение в 200 блоков РСЯ на одну площадку / pageId не обойти &lt;strong&gt;никак&lt;/strong&gt;. Ну или возможные способы решения недоступны простым смертным, как я.&lt;/p&gt;
+
+&lt;p&gt;Мне предложили найти неактивные блоки площадки и удалить их, чтобы высвободить лимит. Это помогло решить проблему в моменте.&lt;/p&gt;
+
+&lt;p&gt;Вы и сами можете это сделать в Партнёрском интерфейсе РСЯ, отфильтровав блоки без статистики:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-07-maksimalnoe-kolichestvo-blokov-rsya-v-adfoks\kak-najti-bloki-rsya-bez-statistiki.webp&quot; alt=&quot;Как найти блоки РСЯ без статистики&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;что-будет-когдя-я-снова-достигну-лимита&quot;&gt;Что будет, когдя я снова достигну лимита&lt;/h1&gt;
+
+&lt;p&gt;Когда я снова достигну лимита, то первое, что приходит в голову — создание ещё одной площадки. Попробую написать своему менеджеру в РСЯ.&lt;/p&gt;
+
+&lt;p&gt;В случае успеха, я получу ещё 200 блоков. Но тогда мне потребуется доработать скрипты, работающие с &lt;strong&gt;API РСЯ&lt;/strong&gt;. Учитывайте это при разработке своих &lt;strong&gt;рекламных приложений&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;запомнить&quot;&gt;Запомнить&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Количество блоков РСЯ для одной площадки ограничено 200 шт. Лимит увеличить нельзя.&lt;/li&gt;
+  &lt;li&gt;Можно самому удалить блоки без статистики в РСЯ. Если не получается, то можно обратиться за помощью в саппорт Адфокса.&lt;/li&gt;
+  &lt;li&gt;Можно попробовать создать ещё одну площадку РСЯ.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;P.S.&lt;/strong&gt; Если вы достигли ограничения, значит у вас масштабный сетап. Напишите мне, поделимся друг с другом опытом.&lt;/p&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="adops" /><category term="adfox" /><category term="yandex" /><category term="rsya" /><summary type="html">Лучше знать об этом на стадии проектирования. До того, как вы начали настройку сетапа.</summary></entry><entry><title type="html">Максимальное количество наборов Динамической монетизации в Адфокс</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/" rel="alternate" type="text/html" title="Максимальное количество наборов Динамической монетизации в Адфокс" /><published>2020-01-06T00:00:00+05:00</published><updated>2020-01-06T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/">&lt;p&gt;По умолчанию количество наборов Динамической монетизации ограничено. Это может стать сюрпризом в большом проекте.&lt;/p&gt;
+
+&lt;!--excerpt_separator--&gt;
+
+&lt;h1 id=&quot;количество-ограничено&quot;&gt;Количество ограничено&lt;/h1&gt;
+
+&lt;p&gt;Количество наборов Динамической монетизации в Адфокс ограничено 100 шт.:
+&lt;img src=&quot;\assets\images\posts_images\2020-01-06-maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks\maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks.webp&quot; alt=&quot;maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Да-да. Когда я настраивал свой сетап, то я подоздревал, что такое ограничение должно быть. Вернее, я думал, что будь я на месте разработчиков Адфокса, то я бы его запроектировал.&lt;/p&gt;
+
+&lt;p&gt;Разработчики в Адфоксе точно неглупые люди, поэтому ограничение есть. Но раз оно было недокументированным, то всё равно стало для меня сюрпризом.&lt;/p&gt;
+
+&lt;p&gt;Я нащупал его лишь экспериментальным путём. Так что, читатель, делюсь с тобой своим знанием. Предупрежден, значит вооружён.&lt;/p&gt;
+
+&lt;h1 id=&quot;и-что-делать&quot;&gt;И что делать?&lt;/h1&gt;
+&lt;p&gt;Я решил вопрос обращением в саппорт Адфокса — количество наборов ДМ увеличили до 200 шт.&lt;/p&gt;
+
+&lt;p&gt;А вот количество доступных блоков РСЯ в аккаунте — нет. И это стало проблемой. Но об этом будет уже в другом &lt;a href=&quot;https://viacheslavkolupaev.ru/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/&quot;&gt;посте&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;P.S.&lt;/strong&gt; Если вы достигли ограничения, значит у вас масштабный сетап. Напишите мне, поделимся друг с другом опытом.&lt;/p&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="adops" /><category term="adfox" /><category term="yandex" /><summary type="html">По умолчанию количество наборов Динамической монетизации ограничено. Это может стать сюрпризом в большом проекте.</summary></entry><entry><title type="html">Подборка инструментов для вебмастера</title><link href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/seo/podborka-instrumentov-dlya-vebmastera/" rel="alternate" type="text/html" title="Подборка инструментов для вебмастера" /><published>2019-02-28T00:00:00+05:00</published><updated>2019-02-28T00:00:00+05:00</updated><id>https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/seo/podborka-instrumentov-dlya-vebmastera</id><content type="html" xml:base="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/seo/podborka-instrumentov-dlya-vebmastera/">&lt;p&gt;В статье перечислены инструменты для вебмастера, которыми пользуюсь я сам. Просмотрите список, добавьте в «Избранное» браузера, чтобы всегда было под рукой.&lt;/p&gt;
+
+&lt;!--excerpt_separator--&gt;
+
+&lt;h1 id=&quot;google-и-яндекс&quot;&gt;Google и Яндекс&lt;/h1&gt;
+&lt;p&gt;Россия — одна из немногих стран, где помимо Google есть отечественная поисковая система Яндекс, занимающая около половины рынка. Поэтому наши вебмастеры вынуждены осваивать два набора инструментов, вместо одного.&lt;/p&gt;
+
+&lt;p&gt;В большинстве других стран такой проблемы нет — там только Google.&lt;/p&gt;
+
+&lt;h1 id=&quot;справочные-материалы-поисковых-систем&quot;&gt;Справочные материалы поисковых систем&lt;/h1&gt;
+&lt;p&gt;Если хотите детально разобраться в вопросе, то придётся их прочитать. Я сам прочитал всё, включая сопутствующие документы, да ещё и не по разу.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/search/howsearchworks/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt; Принципы работы Google Поиска&lt;/a&gt; — рассказано про основы сканирования и индексирования, алгоритмы Google Поиска.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://support.google.com/webmasters#topic=9128571&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Search Console Help&lt;/a&gt; — справка консоли Google Поиска.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/search/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Поиск для разработчиков&lt;/a&gt; — подборка ресурсов для разработчиков: руководства, ссылки, инструменты.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yandex.ru/support/webmaster/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс: Помощь вебмастеру&lt;/a&gt; — подборка справочных и обучающих материалов для вебместеров от Яндекса. Читать обязательно.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;консоли-вебмастеров-поисковых-систем&quot;&gt;Консоли вебмастеров поисковых систем&lt;/h1&gt;
+&lt;p&gt;Для больших сайтов особенно актуальными становятся технические вопросы: индексирование (crawling budget), микроразметка, отслеживание и устранение ошибок.&lt;/p&gt;
+
+&lt;p&gt;Чтобы помочь вебмастерам, поисковики сделали специальные консоли:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/search-console?hl=ru&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Search Console&lt;/a&gt; — консоль Google Поиска. Сейчас параллельно работают две версии: старая и новая. Кое-какие инструменты ещё остаются в старой версии. Например, управление параметрами URL. Для больших проектов и CMS есть  &lt;a href=&quot;https://developers.google.com/webmaster-tools/?hl=ru&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Search Console APIs&lt;/a&gt; с помощью которых можно автоматизировать некоторые операции.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webmaster.yandex.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс.Вебмастер&lt;/a&gt; — аналог от Яндекса. Из особенностей отмечу: региональность, оригинальные тексты, товары и цены, быстрые ссылки, турбо-страницы.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bing.com/toolbox/webmaster&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Bing Webmaster Tools&lt;/a&gt; — аналогичный инструмент от поисковика Bing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webmaster.mail.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Кабинет вебмастера Mail.ru&lt;/a&gt; — минималистичный аналог от Mail.ru.&lt;/li&gt;
+  &lt;li&gt;У поисковика &lt;a href=&quot;https://www.sputnik.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt; Спутник&lt;/a&gt; на данный момент нет консоли вебмастера.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Зарегистрируйтесь в каждой из них и добавьте заранее подготовленные sitemap.xml. Какие бывают sitemap и как их сделать вы можете узнать из раздела «Справочные материалы».&lt;/p&gt;
+
+&lt;h1 id=&quot;счётчики-веб-аналитики&quot;&gt;Счётчики веб-аналитики&lt;/h1&gt;
+&lt;p&gt;Позволяют сделать отчёты, недоступные в консолях вебмастеров:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://analytics.google.com/analytics/web/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Analytics&lt;/a&gt; — бесплатный счётчик от Google. Из минусов — &lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/ios/v3/limits-quotas?hl=ru&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;квоты и ограничения&lt;/a&gt; и связанное с ними семплирование. Есть &lt;a href=&quot;https://developers.google.com/analytics/devguides/reporting/core/v4/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Reporting API v4&lt;/a&gt; и &lt;a href=&quot;https://developers.google.com/analytics/solutions/google-analytics-spreadsheet-add-on&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Analytics Spreadsheet Add-on&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://metrika.yandex.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс Метрика&lt;/a&gt;  — бесплатный аналог от Яндекса. Нет семплирования. Есть &lt;a href=&quot;https://tech.yandex.ru/metrika/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;API Метрики&lt;/a&gt;, &lt;a href=&quot;https://tech.yandex.ru/metrika/doc/api2/logs/intro-docpage/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Logs API&lt;/a&gt; с неагрегированными данными.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;справочники-организаций&quot;&gt;Справочники организаций&lt;/h1&gt;
+&lt;p&gt;Актуально для так называемых локальных бизнесов, которые подразумевают физическое размещение: офис, магазин и т.п.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://business.google.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google My Business&lt;/a&gt; — инструмент, позволяющий управлять информацией о компании в сервисах Google. Требуется активация по почте, Google обещает прислать письмо в среднем за 26 дней. На моей памяти ещё ни разу с первого запроса письмо не пришло. Поэтому активация растягивалась на месяцы.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yandex.ru/sprav/main&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс Справочник&lt;/a&gt; — подтверждение проходит гораздо быстрее. Рекомендую полностью заполнить профиль.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bingplaces.com/DashBoard/Home&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Bing places for business&lt;/a&gt; — аналог от Bing. Можно создать профиль вручную или импортировать из Google My Business.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;инструменты-для-тестирования&quot;&gt;Инструменты для тестирования&lt;/h1&gt;
+&lt;p&gt;Есть инструменты, встроенные в консоли вебмастеров. Например, в Яндекс Вебмастере есть:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Анализ robots.txt.&lt;/li&gt;
+  &lt;li&gt;Анализ файлов Sitemap.&lt;/li&gt;
+  &lt;li&gt;Проверка ответа сервера.&lt;/li&gt;
+  &lt;li&gt;Удаление страниц из поиска.&lt;/li&gt;
+  &lt;li&gt;Проверка мобильных страниц.&lt;/li&gt;
+  &lt;li&gt;XML-валидатор.&lt;/li&gt;
+  &lt;li&gt;Валидатор микроразметки.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;В Google Search Console встроены инструменты тестирования, достаточно выбрать раздел «URL inspection» и указать адрес страницы.&lt;/p&gt;
+
+&lt;p&gt;Помимо встроенных, у Google есть отдельные инструменты:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Page Speed Insights&lt;/a&gt; — анализирует содержание веб-страницы и предлагает решения, которые позволят ускорить ее загрузку. Можно прогнать тесты для мобильных и для компьютеров, что особенно актуально для сайтов с включенным mobile-first индексированием. Аналогичным функционалом обладает &lt;a href=&quot;https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;браузерное расширение Lighthouse для Google Chrome&lt;/a&gt;. См. так же &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Lighthouse in Chrome DevTools&lt;/a&gt;. Будет полезно изучить общую информацию в отчётах Google Analytics → Behavior → Site Speed.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/test/mobile-friendly&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Mobile-Friendly Test&lt;/a&gt; — название говорит само за себя. Опять же особенно актуально для сайтов с включенным mobile-first индексированием.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/test/rich-results&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Rich Results Test&lt;/a&gt; — вы можете узнать, какие расширенные результаты могут быть созданы на основе структурированных данных страницы. Это бета-версия, поэтому проверяет не все типы данных.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/structured-data/testing-tool/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Structured Data Testing Tool&lt;/a&gt; — проверяет, что разметка структурированных данных на странице оформлена правильно.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/test/amp&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;AMP Test&lt;/a&gt; — проверяет, что на AMP-страницах нет ошибок и для них доступны специальные функции AMP в Google Поиске.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.thinkwithgoogle.com/feature/testmysite&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Test My Site&lt;/a&gt; — новый инструмент бенчмаркинга скорости загрузки на мобильных для сетей 3G/4G. Можно взять список конкурентов из Яндекс.Вебмастера и сравнить скорость со своим сайтом. Тест не выдаёт рекомендации, вместо этого предлагает оставить свой емэйл.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;монетизация-трафика&quot;&gt;Монетизация трафика&lt;/h1&gt;
+&lt;p&gt;Это базовые инструменты, без ротаторов и прочего программатика:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/adsense/start/#/?modal_active=none&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google AdSense&lt;/a&gt; — монетизация трафика веб- и AMP-страниц. Есть Native и рекомендательные блоки.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://admob.google.com/home/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google AdMob&lt;/a&gt; — монетизация в мобильных приложениях.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://partner2.yandex.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс Рекламная сеть&lt;/a&gt; — система размещения рекламы на сайтах, в мобильных приложениях и приложениях Smart TV. Выкупит практически неограниченный трафик, fill rate 98% и выше.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Инструменты монетизация для паблишеров — NDA.&lt;/p&gt;
+
+&lt;h1 id=&quot;поиск-для-сайта&quot;&gt;Поиск для сайта&lt;/h1&gt;
+&lt;p&gt;Есть вариант сделать свой поиск с предиктором, автокомплитом и коррекцией ошибок. Например: &lt;a href=&quot;https://www.elastic.co/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Elasticsearch&lt;/a&gt; или &lt;a href=&quot;http://www.sphinxsearch.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Sphinx &lt;/a&gt;. Это отличные сервисы, но внедрять и поддерживать их долго и дорого.&lt;/p&gt;
+
+&lt;p&gt;Есть более быстрый и дешёвый способ — встроить решения от поисковиков:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cse.google.ru/cse/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Система пользовательского поиска&lt;/a&gt; — поиск по веб-страницам и изображениям вашего сайта.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;URL&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс Поиск для сайта&lt;/a&gt; — аналог от Яндекса.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;для-емэйл-рассылок&quot;&gt;Для емэйл рассылок&lt;/h1&gt;
+&lt;p&gt;Как выяснилось, среди моих коллег немногие знают про эти инструменты, а зря:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://postmaster.google.com/u/1/managedomains?pli=1&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Google Postmaster Tools&lt;/a&gt; — инструмент будет полезен, если вы рассылаете большое количество писем пользователям Gmail. Например сможете видеть, когда пользователи помечают ваши письма как спам.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://postoffice.yandex.ru/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Яндекс Почтовый офис&lt;/a&gt; — аналогичный инструмент от Яндекса.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;что-дальше&quot;&gt;Что дальше&lt;/h1&gt;
+&lt;p&gt;Есть что добавить? Напишите мне.&lt;/p&gt;</content><author><name>Вячеслав Колупаев</name><email>v.s.kolupaev@gmail.com</email></author><category term="seo" /><category term="google" /><category term="yandex" /><category term="bing" /><summary type="html">В статье перечислены инструменты для вебмастера, которыми пользуюсь я сам. Просмотрите список, добавьте в «Избранное» браузера, чтобы всегда было под рукой.</summary></entry></feed>

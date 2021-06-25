@@ -1,0 +1,885 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager - Блог Вячеслава Колупаева</title>
+<meta name="description" content="Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.">
+
+
+  <meta name="author" content="Вячеслав Колупаев">
+  
+  <meta property="article:author" content="Вячеслав Колупаев">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Блог Вячеслава Колупаева">
+<meta property="og:title" content="Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager">
+<meta property="og:url" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">
+
+
+  <meta property="og:description" content="Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.">
+
+
+
+  <meta property="og:image" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/assets/images/posts_teasers/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager.webp">
+
+
+
+  <meta name="twitter:site" content="@vskolupaev">
+  <meta name="twitter:title" content="Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager">
+  <meta name="twitter:description" content="Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.">
+  <meta name="twitter:url" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/assets/images/posts_teasers/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager.webp">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-10T00:00:00+05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Вячеслав Колупаев / Viacheslav Kolupaev",
+      "url": "https://viacheslavkolupaev.ru/pages/ViacheslavKolupaev/",
+      "sameAs": ["https://www.linkedin.com/in/vkolupaev/","https://www.facebook.com/v.s.kolupaev","https://twitter.com/vskolupaev"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googleb555c12bd30d69dd.html" />
+
+
+  <meta name="msvalidate.01" content="550CE4DCFFF1A7BC779BF1BBFE6EFB23">
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<script language="javascript">
+  // Enforce SSL
+  (function (root) {
+    "use strict";
+    var h = root ? root.location.hostname : "",
+    p = root ? root.location.protocol : "";
+    if ("http:" === p && !(/^(localhost|127.0.0.1)/).test(h)) {
+      root.location.protocol = "https:";
+    }
+  }
+  ("undefined" !== typeof window ? window : this));
+</script>
+
+<link href="/pages/ViacheslavKolupaev/feed.xml" type="application/atom+xml" rel="alternate" title="Блог Вячеслава Колупаева Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/pages/ViacheslavKolupaev/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PDLRX2V');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- End Favicon -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/pages/ViacheslavKolupaev/">
+          Блог Вячеслава Колупаева
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/posts/">Посты</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/categories/">Категории</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/tags/">Тэги</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pages/ViacheslavKolupaev/about/">Обо мне</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Выпадающее меню</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Выпадающее меню</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">🚀 MLOps</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/" class="active">CI/CD</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">💰 ADOPS</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager/" class="active">ADFOX: multi-size запросы в AdManager</a></li>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/">ADFOX: ограничение по блокам РСЯ</a></li>
+          
+            <li><a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/">ADFOX: ограничение по наборам ДМ</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">🚧 SEO</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/pages/ViacheslavKolupaev/seo/podborka-instrumentov-dlya-vebmastera/">Подборка инструментов для вебмастера</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager">
+    <meta itemprop="description" content="Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.">
+    <meta itemprop="datePublished" content="2020-01-10T00:00:00+05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Динамическая монетизация ADFOX не поддерживает multi-size запросы в AdManager
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-10T00:00:00+05:00">January 10, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> На этой странице</h4></header>
+              <ul class="toc__menu"><li><a href="#как-adfox-направляет-запросы-в-admanager">Как ADFOX направляет запросы в AdManager</a></li><li><a href="#что-такое-и-в-чём-польза-multi-size">Что такое и в чём польза multi-size</a><ul><li><a href="#fixed-size">Fixed-size</a></li><li><a href="#multi-size">Multi-size</a></li></ul></li><li><a href="#как-adfox-поддерживает-multi-size--для-запросов-в-admanager">Как ADFOX поддерживает multi-size  для запросов в AdManager</a></li><li><a href="#можно-ли-для-дм-включить-отправку-multi-size-запросов">Можно ли для ДМ включить отправку multi-size запросов</a></li><li><a href="#запомнить">Запомнить</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><strong>Из-за этого ваш доход может быть меньше. Но есть одно хитрое решение.</strong>
+<!--excerpt_separator--></p>
+
+<p class="notice"><strong>Дисклеймер.</strong> Я не сотрудник ADFOX, Яндекса и Google, и не могу гарантировать абсолютную точность дальнейших утверждений. Все выводы сделаны на основании открытых источников и собственных исследований.</p>
+
+<h1 id="как-adfox-направляет-запросы-в-admanager">Как ADFOX направляет запросы в AdManager</h1>
+
+<p>Как именно ADFOX направляет рекламные запросы в AdManager не описано в документации ADFOX и уж тем более в документации AdManager. Но, пожалуй, есть только один способ — библиотека <a href="https://developers.google.com/publisher-tag/guides/get-started">Google Publisher Tag</a>.</p>
+
+<p>Скорее всего, вызов осуществляется для каждой площадки ADFOX, к которой привязан набор Динамической монетизации. Вызов делает сам ADFOX, поэтому вам не нужно специально размечать сайт с помощью GPT. Но всё равно полезно понимать, как это работает внутри.</p>
+
+<p>Пример вызова ad unit’a в AdManager выглядит так:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="dl">"</span><span class="s2">utf-8</span><span class="dl">"</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">GPT</span><span class="o">&lt;</span><span class="sr">/title</span><span class="err">&gt;
+</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="k">async</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://securepubads.g.doubleclick.net/tag/js/gpt.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span> <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+   <span class="nb">window</span><span class="p">.</span><span class="nx">googletag</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">googletag</span> <span class="o">||</span> <span class="p">{</span><span class="na">cmd</span><span class="p">:</span> <span class="p">[]};</span>
+   <span class="nx">googletag</span><span class="p">.</span><span class="nx">cmd</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">googletag</span>
+         <span class="p">.</span><span class="nx">defineSlot</span><span class="p">(</span>
+             <span class="dl">'</span><span class="s1">ad-unit-path</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">],</span> <span class="dl">'</span><span class="s1">div-id</span><span class="dl">'</span><span class="p">)</span>
+         <span class="p">.</span><span class="nx">addService</span><span class="p">(</span><span class="nx">googletag</span><span class="p">.</span><span class="nx">pubads</span><span class="p">());</span>
+     <span class="nx">googletag</span><span class="p">.</span><span class="nx">enableServices</span><span class="p">();</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h1 id="что-такое-и-в-чём-польза-multi-size">Что такое и в чём польза <code class="language-plaintext highlighter-rouge">multi-size</code></h1>
+
+<p>Допустим, на сайте имеется рекламное место максимальным размером <code class="language-plaintext highlighter-rouge">300x600</code>. Появляются опции: выводить в нём креативы строго <code class="language-plaintext highlighter-rouge">300x600</code> или же добавить меньшие размеры.</p>
+
+<p>Давайте разберемся на примерах.</p>
+
+<h2 id="fixed-size">Fixed-size</h2>
+
+<p>В простейшем случае рекламное место с одним фиксированным размером может быть определено следующим кодом GPT:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">googletag</span>
+    <span class="p">.</span><span class="nx">defineSlot</span><span class="p">(</span>
+    	<span class="dl">'</span><span class="s1">/1234567/your-ad-slot-name</span><span class="dl">'</span><span class="p">,</span>
+    	<span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
+    	<span class="dl">'</span><span class="s1">div-gpt-fixed-size-ad</span><span class="dl">'</span>
+    <span class="p">)</span>
+    <span class="p">.</span><span class="nx">addService</span><span class="p">(</span><span class="nx">googletag</span><span class="p">.</span><span class="nx">pubads</span><span class="p">());</span>
+</code></pre></div></div>
+
+<p>Для таких <code class="language-plaintext highlighter-rouge">fixed-size</code> мест ротатор рекламы запрашивает и получает от монетизаторов креатив размером <code class="language-plaintext highlighter-rouge">300x600</code>.</p>
+
+<p>Если ротатор вдруг пришлет креатив другого размера, то он будет <a href="https://support.google.com/admanager/answer/1143651">автоматически отфильтрован AdManager</a>:</p>
+
+<p><img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\kreativy-kotorye-ne-sootvetstvuyut-razmeru-zaprosa-obyavleniya-otfiltrovyvayutsya.webp" alt="Креативы, которые не соответствуют размеру запроса объявления, отфильтровываются." /></p>
+
+<p><strong>Минусы:</strong> если мало рекламодателей с таким размером креатива, то давление на аукцион будет меньше, соответственно и доход может быть меньше.</p>
+
+<p><strong>Плюсы:</strong> вёрстка рекламных мест не дёргается, сайт выглядит более органично.</p>
+
+<h2 id="multi-size">Multi-size</h2>
+
+<p>Код GPT <code class="language-plaintext highlighter-rouge">multi-size</code> отличается от <code class="language-plaintext highlighter-rouge">fixed-size</code> только указанием словаря допустимых размеров креатива:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">googletag</span>
+    <span class="p">.</span><span class="nx">defineSlot</span><span class="p">(</span>
+    	<span class="dl">'</span><span class="s1">/1234567/your-ad-slot-name</span><span class="dl">'</span><span class="p">,</span>
+    	<span class="p">[[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">600</span><span class="p">]</span> <span class="p">[</span><span class="mi">240</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span> <span class="p">[</span><span class="mi">240</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">]],</span>
+    	<span class="dl">'</span><span class="s1">div-gpt-multi-size-ad</span><span class="dl">'</span>
+    <span class="p">)</span>
+    <span class="p">.</span><span class="nx">addService</span><span class="p">(</span><span class="nx">googletag</span><span class="p">.</span><span class="nx">pubads</span><span class="p">());</span>
+</code></pre></div></div>
+
+<p>Для таких <code class="language-plaintext highlighter-rouge">multi-size</code> мест ротатор запрашивает все указанные в настройках размеры, вписывающиеся в <code class="language-plaintext highlighter-rouge">300x600</code>. Например: <code class="language-plaintext highlighter-rouge">300x250</code>, <code class="language-plaintext highlighter-rouge">160x600</code>, <code class="language-plaintext highlighter-rouge">240x400</code>, <code class="language-plaintext highlighter-rouge">240x600</code>, <code class="language-plaintext highlighter-rouge">300x600</code>.</p>
+
+<p>В этом случае, в AdManager должны быть настроены размеры для вызываемого из ADFOX ad unit’a:
+<img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\admanager-ad-unit-sizes.webp" alt="Размеры ad unit в AdManager" /></p>
+
+<p>Таким образом, с применением <code class="language-plaintext highlighter-rouge">multi-size</code> доход может быть больше, так как появлется аукцион среди размеров креативов.</p>
+
+<p>Не зря же РСЯ предлагает настроить <code class="language-plaintext highlighter-rouge">multi-size</code> при создании блока:
+<img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\yan-multi-size-set-up.webp" alt="РСЯ предлагает настроить multi-size при создании блока" /></p>
+
+<p>Как вы понимаете, интеграция ADFOX и РСЯ полная и запрос <code class="language-plaintext highlighter-rouge">multi-size</code> креативов работает по умолчанию.</p>
+
+<h1 id="как-adfox-поддерживает-multi-size--для-запросов-в-admanager">Как ADFOX поддерживает <code class="language-plaintext highlighter-rouge">multi-size</code>  для запросов в AdManager</h1>
+
+<p>Я узнал об этом случайно. Я настроил в ADFOX <strong>Динамическую монетизацию</strong> (далее — «ДМ») по шаблону DFP с отправкой запросов на подбор креатива в AdManager.
+Еще я настроил кампании <strong>Внешней монетизации</strong> (далее — «ВМ») с отправкой запросов в тот же AdManager.</p>
+
+<p>Изучая отчёты AdManager, я обратил внимание, что ДМ запрашивает в AdManager креативы только одного размера, например, <code class="language-plaintext highlighter-rouge">300x600</code>.
+<img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\multi-size-ad-requests-disabled.webp" alt="multi-size выключен" /></p>
+
+<p>Запрашивается размер, указанный в настройках набора ДМ. Здесь так и просится добавить перечень допустимых размеров:
+<img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\nastrojki-nabora-dinamicheskoj-monetizacii-v-adfox.webp" alt="Настройки набора Динамической монетизации в ADOFX" /></p>
+
+<p>При этом, кампании ВМ спокойно запрашивают <code class="language-plaintext highlighter-rouge">multi-size</code>.
+<img src="\assets\images\posts_images\2020-01-10-dinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager\multi-size-ad-requests-enabled.webp" alt="multi-size включен" /></p>
+
+<p>Код вызова <code class="language-plaintext highlighter-rouge">multi-size</code> я сам указываю в коде баннера, ассоциированного с кампанией ВМ (внимание, код неполный):</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">googletag</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">googletag</span> <span class="o">||</span> <span class="p">{</span><span class="na">cmd</span><span class="p">:</span> <span class="p">[]};</span>
+<span class="nx">googletag</span><span class="p">.</span><span class="nx">cmd</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">googletag</span><span class="p">.</span><span class="nx">defineSlot</span><span class="p">(</span>
+    	<span class="dl">'</span><span class="s1">/1234567/ad-unit-name</span><span class="dl">'</span><span class="p">,</span>
+    	<span class="p">[[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="mi">240</span><span class="p">,</span> <span class="mi">400</span><span class="p">],</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="mi">240</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">]],</span>
+    	<span class="dl">'</span><span class="s1">div-gpt-ad-some-long-random-number-0</span><span class="dl">'</span>
+    	<span class="p">).</span><span class="nx">addService</span><span class="p">(</span><span class="nx">googletag</span><span class="p">.</span><span class="nx">pubads</span><span class="p">());</span>
+    <span class="nx">googletag</span><span class="p">.</span><span class="nx">pubads</span><span class="p">().</span><span class="nx">enableSingleRequest</span><span class="p">();</span>
+    <span class="nx">googletag</span><span class="p">.</span><span class="nx">enableServices</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><strong>Вывод.</strong> Выходит, что в случае с ДМ имеется недостаток в реализации запросов в AdManager, не дающий возможности <strong>заработать в Google по максимуму</strong>, так как исключается аукцион среди размеров креативов. С другой стороны, <strong>в РСЯ с этим проблем нет</strong>.</p>
+
+<p>Я искренне считал, что кампании типа ДМ — эволюционное развитие ВМ, впитавшее в себя все лучшее. Выходит, что не всё так просто.</p>
+
+<p>И тут я задался вопросом: как это исправить?</p>
+
+<h1 id="можно-ли-для-дм-включить-отправку-multi-size-запросов">Можно ли для ДМ включить отправку <code class="language-plaintext highlighter-rouge">multi-size</code> запросов</h1>
+
+<p>Экспресс-ресёрсч по документации ничего не дал. Эта тема никак не освещена.</p>
+
+<p>Далее я обратился в саппорт ADFOX. Отмечу, что ребята там грамотные, разбираются в сложных вопросах устройства ротатора. Я даже спросил, может быть есть какая-то недокументированная возможность в ядре ADFOX, чтобы включить нужный мне функционал.</p>
+
+<p>Результат такой: <strong><code class="language-plaintext highlighter-rouge">multi-size</code> в ДМ сейчас не поддерживается</strong>, размеры только фиксированные.</p>
+
+<p>По итогу я попросил добавить такую фичу в продукт в будущем. Это будет системное решение, которое положительно повлияет на доходы всех паблишеров, использующих ADFOX.</p>
+
+<p>Я отдаю себе отчёт, что там вряд ли прислушаются к единичной просьбе. Но если мотивированных запросов будет много, то им придётся сделать это.</p>
+
+<p class="notice--success">Поэтому, <strong>прямо сейчас напишите</strong> в саппорт просьбу сделать для ДМ 2.0 отправку <code class="language-plaintext highlighter-rouge">multi-size</code> запросов в AdManаger. Это ваши незаработанные деньги!</p>
+
+<h1 id="запомнить">Запомнить</h1>
+<ol>
+  <li>ADFOX размечает ваш сайт тегами GPT и отправляет запросы в AdManager за вас. Чтобы лучше понять, как всё работает, смотрите GPT.</li>
+  <li>Запросы Динамической монетизации отправляются в Google AdManager только <code class="language-plaintext highlighter-rouge">fixed-size</code>. Так меньше давление на аукцион. Хотя GPT позволяет отправлять <code class="language-plaintext highlighter-rouge">multi-size</code>.</li>
+  <li>Для запросов в  РСЯ <code class="language-plaintext highlighter-rouge">multi-size</code> включен по умолчанию.</li>
+  <li>В дополнение к ДМ, можно отправлять <code class="language-plaintext highlighter-rouge">multi-size</code> запросы в AdManager из кампаний Внешний монетизации. Но так придётся самостоятельно управлять ставками кампаний: вручную или посредством <strong>API</strong>. Это и есть «хитрое» решение, которое я применяю.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Метки: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#adfox" class="page__taxonomy-item" rel="tag">adfox</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#admanager" class="page__taxonomy-item" rel="tag">admanager</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#gpt" class="page__taxonomy-item" rel="tag">gpt</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/tags/#yandex" class="page__taxonomy-item" rel="tag">yandex</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Разделы: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/pages/ViacheslavKolupaev/categories/#adops" class="page__taxonomy-item" rel="tag">adops</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Дата изменения:</strong> <time datetime="2020-01-10T00:00:00+05:00">January 10, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Поделиться</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=vskolupaev&text=%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F+%D0%BC%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F+ADFOX+%D0%BD%D0%B5+%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D0%B5%D1%82+multi-size+%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B2+AdManager%20https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fadops%2Fdinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fadops%2Fdinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fadops%2Fdinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Поделиться LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fviacheslavkolupaev.ru%2Fpages%2FViacheslavKolupaev%2Fadops%2Fdinamicheskaya-monetizaciya-adfox-ne-podderzhivaet-multi-size-zaprosy-v-admanager%2F" class="btn btn--telegram" title="Поделиться Telegram"><i class="fab fa-telegram" aria-hidden="true"></i><span> Telegram</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/" class="pagination--pager" title="Максимальное количество блоков РСЯ в Адфокс
+">Предыдущая</a>
+    
+    
+      <a href="/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/" class="pagination--pager" title="3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования
+">Следующая</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Вам также может понравиться</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/500x300.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/software-development/http-status-codes/" rel="permalink">Шпаргалка по HTTP Status Codes (кодам ответа)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-06-24T00:00:00+05:00">June 24, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/500x300.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/software-development/3-principa-soblyudaya-kotorye-ne-nuzhno-bespokoitsya-o-skorosti-programmirovaniya/" rel="permalink">3 принципа, соблюдая которые не нужно беспокоиться о скорости программирования
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-04T00:00:00+05:00">February 4, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          менее 1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/posts_teasers/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-blokov-rsya-v-adfoks/" rel="permalink">Максимальное количество блоков РСЯ в Адфокс
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-07T00:00:00+05:00">January 7, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Лучше знать об этом на стадии проектирования. До того, как вы начали настройку сетапа.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/pages/ViacheslavKolupaev/assets/images/posts_teasers/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks.webp" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/pages/ViacheslavKolupaev/adops/maksimalnoe-kolichestvo-naborov-dinamicheskoj-monetizacii-v-adfoks/" rel="permalink">Максимальное количество наборов Динамической монетизации в Адфокс
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-01-06T00:00:00+05:00">January 6, 2020</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          менее 1 мин на чтение
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">По умолчанию количество наборов Динамической монетизации ограничено. Это может стать сюрпризом в большом проекте.
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Введите поисковый запрос..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Связаться со мной:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/vkolupaev/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://www.facebook.com/v.s.kolupaev" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://t.me/vkolupaev/" rel="nofollow noopener noreferrer"><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a></li>
+        
+      
+        
+          <li><a href="mailto:v.s.kolupaev@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    <li><a href="/pages/ViacheslavKolupaev/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> RSS-лента</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Вячеслав Колупаев / Viacheslav Kolupaev. Сайт работает на <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/pages/ViacheslavKolupaev/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr.min.js"></script>
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr-store.js"></script>
+<script src="/pages/ViacheslavKolupaev/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- start custom analytics snippet -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDLRX2V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- end custom analytics snippet -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
